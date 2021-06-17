@@ -1,0 +1,38 @@
+package com.everis.buenaspracticas;
+
+public class Articulo {
+	
+	private String articulo;
+	private int precio;
+	private Impuesto impuesto;
+	
+	
+	public Articulo(String articulo, int precio) {
+		this.articulo = articulo;
+		this.precio = precio;
+		this.impuesto = Impuesto.valueOf(articulo);
+		
+	}
+
+	public String getArticulo() {
+		return articulo;
+	}
+
+	public void setArticulo(String articulo) {
+		this.articulo = articulo;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+
+	
+	
+	
+
+}

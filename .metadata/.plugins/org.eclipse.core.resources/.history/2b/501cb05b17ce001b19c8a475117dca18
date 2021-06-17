@@ -1,0 +1,13 @@
+package oop;
+
+public class Perro extends Mamifero {
+	
+	private int ladridos;
+
+	public Perro( String nombres) {
+		super( nombres, 4);
+		this.ladridos = 0;
+	}
+	
+
+}

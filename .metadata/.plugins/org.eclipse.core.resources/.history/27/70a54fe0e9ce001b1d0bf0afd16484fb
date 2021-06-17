@@ -1,0 +1,63 @@
+package com.everis.buenaspracticas.modelos;
+
+import com.everis.buenaspracticas.constantes.PersonaJuridica;
+import com.everis.buenaspracticas.utils.Calculadora;
+
+public class Persona {
+
+	private String nombre;
+	private int edad;
+	private PersonaJuridica personaJuridica;
+
+
+
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	/**
+	 * asigna persona juridica segun string personaJuridica con methodo estatico asignarPersonalidadJuridica
+	 * de clase Calculadora.
+	 * @param nombre
+	 * @param edad
+	 * @param personaJuridica
+	 */
+	public Persona(String nombre, int edad, String personaJuridica) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.personaJuridica = Calculadora.asignarPersonalidadJuridica(personaJuridica) ;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	
+	/**
+	 * @return the edad
+	 */
+	public int getEdad() {
+		return edad;
+	}
+
+	/**
+	 * @param edad the edad to set
+	 */
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public PersonaJuridica getPersonaJuridica() {
+		return this.personaJuridica;
+	}
+	
+	
+
+
+
+}

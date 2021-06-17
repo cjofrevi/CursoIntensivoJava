@@ -1,0 +1,56 @@
+package beca;
+
+/**
+ * clase que realiza operaciones basicas para numeros enteros, solo utiliza como argumentos enteros.
+ * @author cjofrevi
+ *
+ */
+
+public class OperacionesBasicas {
+	
+	/**
+	 * suma enteros
+	 * @param int a 
+	 * @param int b
+	 */
+	public static void sumar( int a, int b) {
+		
+			System.out.println(a+b);
+	}
+	
+	/**
+	 * resta enteros
+	 * @param int a
+	 * @param int b
+	 */
+	public static void restar( int a, int b) {
+	
+			System.out.println( a-b);	
+	}
+
+	/**
+	 * divide enteros, verifica que divisor sea diferente de cero
+	 * @param a
+	 * @param b
+	 */
+	public static void dividir( int a, int b) {
+		if(b == 0) {
+			System.out.println("ingrese numero diferente a 0");
+			return ;
+		}
+		System.out.println(a/b);
+	}
+
+	/**
+	 * multiplica enteros
+	 * @param a
+	 * @param b
+	 */
+	public static void multiplicar( int a, int b) {
+		
+		
+			System.out.println(a*b);	
+
+	}
+		
+}

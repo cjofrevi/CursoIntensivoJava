@@ -1,0 +1,77 @@
+package com.everis.buenaspracticas;
+
+public class Persona {
+
+	private String nombre;
+	private int edad;
+	private PersonaJuridica personaJuridica;
+
+
+
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	/**
+	 * asigna persona juridica segun strign indicado en persona juridica
+	 * @param nombre
+	 * @param edad
+	 * @param personaJuridica
+	 */
+	public Persona(String nombre, int edad, String personaJuridica) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.personaJuridica = asignarPersonalidadJuridica(personaJuridica);
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public PersonaJuridica getPersonaJuridica() {
+		return this.personaJuridica;
+	}
+
+	/**
+	 * Asigna personalidad juridica .
+	 *
+	 * @param personalidad the personalidad
+	 * @return the persona juridica
+	 */
+	private static PersonaJuridica asignarPersonalidadJuridica(String personalidad) {
+
+		PersonaJuridica personaJuridica;
+		String personaJuridicaUpper = personalidad.toUpperCase().trim();
+
+		switch (personaJuridicaUpper) {
+		case "NATURAL":
+			personaJuridica = PersonaJuridica.NATURAL;
+			break;
+		case "JURIDICA":
+			personaJuridica = PersonaJuridica.JURIDICA;
+			break;
+
+		default:
+			personaJuridica = PersonaJuridica.NATURAL;
+			break;
+		}
+
+		return personaJuridica;
+	}
+
+}

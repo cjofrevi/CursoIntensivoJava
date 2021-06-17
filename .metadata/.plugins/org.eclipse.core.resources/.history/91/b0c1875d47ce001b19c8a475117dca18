@@ -1,0 +1,5 @@
+package abstraccion;
+
+public abstract class Figura {
+
+}

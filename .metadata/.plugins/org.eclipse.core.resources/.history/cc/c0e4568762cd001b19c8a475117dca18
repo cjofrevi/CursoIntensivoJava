@@ -1,0 +1,97 @@
+package beca;
+
+/**
+ * clase que realiza operaciones basicas para numeros enteros, solo utiliza como argumentos enteros.
+ * @author cjofrevi
+ *
+ */
+
+public class OperacionesBasicas {
+	
+
+	public static Integer sumar(Integer a, Integer b) {
+		
+	
+		if( sonNullos(a, b)) {
+			return 0;
+		}
+		return a+b;
+		
+	}
+	
+	
+	/**
+	 * resta enteros.
+	 * @param Integer a
+	 * @param Integer b
+	 */
+	public static Integer restar( Integer a, Integer b) {
+	
+		if( sonNullos(a, b)) {
+			return 0;
+		}
+		return a-b;
+		
+				
+	}
+
+	/**
+	 * divide enteros, verifica que divisor sea diferente de cero.
+	 * @param Integer a
+	 * @param Integer b
+	 */
+	public static Integer dividir( int a, int b) {
+		if(b == 0) {
+			System.out.println("ingrese numero diferente a 0");
+			return 0;
+		}else if(sonNullos(a, b)) {
+			return 0;
+		}else {
+			return a /b;
+			
+		}
+	
+	}
+
+	/**
+	 * multiplica enteros.
+	 * @param Integer a
+	 * @param Integer b
+	 */
+	public static Integer multiplicar( int a, int b) {
+		
+		if( sonNullos(a, b)) {
+			return 0;
+		}else {
+			
+			return a*b;
+		}
+		
+	}
+	
+	private static boolean sonNullos(Integer a, Integer b) {
+		
+		if( a != null && b !=null) {
+			
+			return false;
+		}	
+		System.out.println("no permite nulos");
+		return true;
+		
+	}
+	
+//	private static boolean sonInteger(Integer a, Integer b) {
+//		if (a instanceof Integer && b instanceof Integer) {
+//			return true;
+//		}else {
+//			System.out.println("solo ingrese tipo Integer");
+//			return false;
+//		}
+		
+//	}
+	
+	
+	
+	
+		
+}

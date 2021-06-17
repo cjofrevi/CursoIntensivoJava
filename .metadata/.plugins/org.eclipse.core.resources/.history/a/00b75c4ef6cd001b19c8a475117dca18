@@ -1,0 +1,66 @@
+package beca;
+
+public class TareaArrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		for(int i: arregloCien()) {
+//			System.out.println(i);
+//		}
+//		
+//		for(int i: arregloPares()) {
+//			System.out.println(i);
+//		}
+		
+		arregloPiramide(100);
+		
+
+	}
+	
+	public static int[] arregloCien() {
+		int[] array = new int[100];
+		for(  int i= 0; i<100; i++) {
+			array[i] = i+1;
+		}
+		
+		return array;
+	}
+	
+	public static int[] arregloPares() {
+		int[] array = new int[100];
+		
+		int indice = 0;
+		int numero = 0;
+		while(indice < array.length) {
+			if(numero % 2 == 0) {
+				array[indice] = numero;
+				indice++;
+			}
+			numero++;
+		}
+		return array;
+	}
+	
+	public static void arregloPiramide(int largoAreglo) {
+		
+		int[] array = new int[largoAreglo];
+		for(  int i= 1; i<largoAreglo; i++) {
+			array[i] = i+1;
+		}
+		
+		int linea = 1 ;
+		int index = 0;
+		for(int i = 0; i < array.length; i++) {
+			for(int j = i; j < linea; j++) {
+				System.out.print(array[j]+" ");
+			}
+			linea++;
+			System.out.println("");
+			
+		}
+		
+
+	}
+	
+
+}

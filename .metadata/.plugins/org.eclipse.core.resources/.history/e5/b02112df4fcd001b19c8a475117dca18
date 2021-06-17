@@ -1,0 +1,93 @@
+package beca;
+
+/**
+ * clase que realiza operaciones basicas para numeros enteros, solo utiliza como argumentos enteros.
+ * @author cjofrevi
+ *
+ */
+
+public class OperacionesBasicas {
+	
+	/**
+	 * suma enteros
+	 * @param int a 
+	 * @param int b
+	 */
+	public static void sumar( int a, int b) {
+		if(isInt(a, b)) {
+			System.out.println(a+b);
+		} else {
+			return ;
+		}
+		
+	}
+	
+	/**
+	 * resta enteros
+	 * @param int a
+	 * @param int b
+	 */
+	public static void restar( int a, int b) {
+		if(isInt(a, b)) {
+			System.out.println( a-b);
+		} else {
+			return ;
+		}
+		
+	}
+
+	/**
+	 * divide enteros, verifica que divisor sea diferente de cero
+	 * @param a
+	 * @param b
+	 */
+	public static void dividir( int a, int b) {
+		
+		if(isInt(a, b)) {
+			System.out.println(a/b);
+		} else {
+			return ;
+		}
+	}
+
+	/**
+	 * multiplica enteros
+	 * @param a
+	 * @param b
+	 */
+	public static void multiplicar( int a, int b) {
+		if(b< 0) {
+			System.out.println("ingrese numero mayor a 0");
+			return ;
+		}
+		
+		if(isInt(a, b)) {
+			System.out.println(a*b);	
+		} else {
+			return ;
+		}
+		
+	}
+	
+	/**
+	 * valida que ambos valores sean enteros
+	 * @param int a
+	 * @param int b
+	 * @return boolean si ambos son enteros
+	 */
+	private static  boolean isInt(int a, int b) {
+		
+		if(a == (int)a && b ==(int)b) {
+			
+			return true;
+		}
+		else {
+			System.out.println("ingresos solo enteros");
+			return false;
+			
+		}
+	}
+
+
+	
+}

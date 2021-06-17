@@ -1,0 +1,39 @@
+package oop;
+
+public class Salmon extends Animal {
+	
+	private String tipoAgua;
+	private int velMaxima;
+	
+	public Salmon() {
+		super();
+
+	}
+	
+	public Salmon(String tipoAgua, int velMaxima) {
+		super();
+		this.tipoAgua = tipoAgua;
+		this.velMaxima = velMaxima;
+	}
+
+	public String getTipoAgua() {
+		return tipoAgua;
+	}
+
+	public void setTipoAgua(String tipoAgua) {
+		this.tipoAgua = tipoAgua;
+	}
+
+	public int getVelMaxima() {
+		return velMaxima;
+	}
+
+	public void setVelMaxima(int velMaxima) {
+		this.velMaxima = velMaxima;
+	}
+	
+	
+	
+	
+
+}

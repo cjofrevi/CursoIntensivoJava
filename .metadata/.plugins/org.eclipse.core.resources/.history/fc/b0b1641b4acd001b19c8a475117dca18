@@ -1,0 +1,26 @@
+package beca;
+/**
+ * 
+ * @author cjofrevi
+ * La clase library es un ejemplo simple para imprimir en terminal mensaje "hola mundo".
+ *
+ */
+public class Library {
+	
+	/**
+	 * Este es el metodo main que imprime en terminal. 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println("Hola a todos");
+	}
+	
+	/**
+	 * Metodo que siempre retorna true cuando es ejecutado.
+	 * @return true
+	 */
+    public boolean someLibraryMethod() {
+        return true;
+    }
+}

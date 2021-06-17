@@ -1,0 +1,64 @@
+package com.everis.buenaspracticas;
+
+import java.util.List;
+
+public class Persona {
+
+	private String nombre;
+	private int edad;
+	private PersonaJuridica personaJuridica;
+//	private List<Articulo> listaArticulos;
+
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	public Persona(String nombre, int edad, String personaJuridica) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.personaJuridica = asignarPersonalidaJuridica(personaJuridica);
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public float getPersonaJuridica() {
+		return personaJuridica.getImpuesto();
+	}
+
+	private static PersonaJuridica asignarPersonalidaJuridica(String personalidad) {
+
+		PersonaJuridica personaJuridica;
+		String personaJuridicaUpper = personalidad.toUpperCase();
+
+		switch (personaJuridicaUpper) {
+		case "NATURAL":
+			personaJuridica = PersonaJuridica.NATURAL;
+			break;
+		case "JURIDICA":
+			personaJuridica = PersonaJuridica.JURIDICA;
+			break;
+
+		default:
+			personaJuridica = PersonaJuridica.NATURAL;
+			break;
+		}
+
+		return personaJuridica;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.everis.buenaspracticas;
+
+import java.util.List;
+
+public class Calculadora {
+	
+	public static void calcularTotal(Persona persona, List<Articulo> listaArticulo) {
+		
+		float total = 0;
+		
+		for(Articulo articulo : listaArticulo) {
+			total += articulo.getPrecio()*(1+articulo.getImpuesto());
+		}
+		
+		total = persona.getEdad() >= 65 ? total*(0.9f) : total;
+		
+		total += total*persona.getPersonaJuridica().getImpuesto();
+		
+		System.out.println("Cliente : "+persona.getNombre());
+		System.out.println("Compro un total de "+total);
+	}
+
+}

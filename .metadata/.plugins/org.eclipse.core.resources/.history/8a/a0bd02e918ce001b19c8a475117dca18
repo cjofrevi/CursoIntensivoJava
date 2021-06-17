@@ -1,0 +1,8 @@
+package oop;
+
+public class Salmon extends Animal {
+	
+	private String tipoAgua;
+	
+
+}

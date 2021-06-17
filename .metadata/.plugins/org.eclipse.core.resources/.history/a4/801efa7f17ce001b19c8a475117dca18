@@ -1,0 +1,9 @@
+package oop;
+
+public class Gatos extends Mamifero {
+	
+	private int maullidos;
+	
+	
+
+}

@@ -1,0 +1,62 @@
+package com.everis.buenaspracticas;
+
+public class Articulo {
+	
+	private String articulo;
+	private int precio;
+	private Impuesto impuesto;
+	
+	
+	public Articulo(String articulo, int precio) {
+		this.articulo = articulo;
+		this.precio = precio;
+		this.impuesto = asignarImpuesto(articulo);
+		
+	}
+
+	public String getArticulo() {
+		return articulo;
+	}
+
+	public void setArticulo(String articulo) {
+		this.articulo = articulo;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+		
+	public float getImpuesto() {
+		return impuesto.getPorcentageImpuesto();
+	}
+
+	private static Impuesto asignarImpuesto(String articulo) {
+		
+		Impuesto impuesto;
+		
+		String articuloUpper = articulo.toUpperCase().trim();
+		
+		switch (articuloUpper) {
+		case "CIGARROS":
+			impuesto = Impuesto.CIGARROS;
+			break;
+		case "ALCOHOL":
+			impuesto = Impuesto.ALCOHOL;
+
+		default:
+			impuesto = Impuesto.OTROS;
+			break;
+		}
+		
+		return impuesto;
+	}
+	
+	
+	
+
+}

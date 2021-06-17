@@ -1,0 +1,25 @@
+package beca;
+
+public abstract class ControlFlujo {
+	
+	public static void main(String[] args) {
+		
+		int contadorWhile = 0;
+		
+		while(contadorWhile <=10) {
+			contadorWhile++;
+			System.out.println("Abdominal numero "+contadorWhile);
+		}
+		
+		String nombre = "Cristian";
+		int largoString = nombre.length();
+		int contadorDoWhile = 0;
+		
+		do {
+			System.out.println(nombre.charAt(largoString));
+			contadorDoWhile++;
+		}while(contadorDoWhile < largoString );
+		
+	}
+
+}

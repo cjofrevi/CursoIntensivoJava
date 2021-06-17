@@ -1,0 +1,26 @@
+package abstraccion;
+
+public class Cuadrado extends Figura {
+	
+	private float lado;
+	
+	
+
+	public Cuadrado(float lado) {
+		this.lado = lado;
+		setLados(4);
+	}
+
+	@Override
+	public float getArea() {
+		
+		return lado * lado;
+	}
+
+	@Override
+	public float getPerimetro() {
+		// TODO Auto-generated method stub
+		return lado * getLados();
+	}
+
+}
