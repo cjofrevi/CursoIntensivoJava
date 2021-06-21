@@ -4,4 +4,7 @@
 		<item key="project_location" value="C:\Users\cjofrevi\Documents\workspace-spring-tool-suite-4-4.10.0.RELEASE\beca"/>
 		<item key="use_default_location" value="true"/>
 	</section>
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item key="project_location" value="C:\Users\cjofrevi\Documents\workspace-spring-tool-suite-4-4.10.0.RELEASE\manejocarniceria"/>
+	</section>
 </section>

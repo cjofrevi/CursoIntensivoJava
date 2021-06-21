@@ -3,6 +3,7 @@ package com.everis.beca.springbootpersona.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.everis.beca.springbootpersona.mapper.Persona;
 
@@ -23,6 +24,9 @@ public interface IPersonaRepository extends JpaRepository<Persona, Integer> {
 	List<Persona> findByNombre(String nombre);
 	
 	List<Persona> findByApellido(String apellido);
+	
+	@Query("select p from Persona p where p.direccion = ?1")
+	List<Persona> findPorDireccion(String direccion);
 		
 	
 

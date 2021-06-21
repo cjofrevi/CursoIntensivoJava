@@ -79,6 +79,10 @@ public class PersonaController {
 		return repository.findByApellido(apellido);
 	}
 	
+	@GetMapping("/findDireccion/{direccion}")
+	public List<Persona> findUsuarioPorDireccion(@PathVariable("direccion") String direccion){
+		return repository.findPorDireccion(direccion);
+	}
 	
 
 }
